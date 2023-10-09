@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Parametros</name>
+    <name>T_Replica_Address</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -427,23 +428,23 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2023/10/08 16:59:15.474</created_date>
+    <created_date>2023/10/08 18:07:18.771</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/10/08 16:59:15.474</modified_date>
+    <modified_date>2023/10/08 18:07:18.771</modified_date>
     <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>CN_ORACLE</name>
-    <server>192.168.199.129</server>
+    <name>CN_ODS</name>
+    <server>${HOSTNAME}</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>xe</database>
-    <port>1521</port>
-    <username>ETL_USER</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce108fc0fc8e</password>
+    <database>${DATEBASENAME}</database>
+    <port>${PORTNUMBER}</port>
+    <username>${SCHEMA}</username>
+    <password>${PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -462,7 +463,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>1521</attribute>
+        <attribute>${PORTNUMBER}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -478,11 +479,11 @@
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
@@ -492,29 +493,24 @@
   </connection>
   <order>
     <hop>
-      <from>Table input</from>
+      <from>Microsoft Excel input</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Microsoft Excel input</from>
       <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Sort rows</from>
-      <to>Row denormaliser</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Row denormaliser</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>Set variables</to>
+      <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Row denormaliser</name>
-    <type>Denormaliser</type>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -523,84 +519,68 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <key_field>NOMBRE_PARAM</key_field>
-    <group>
-      <field>
-        <name>SISTEMA</name>
-      </field>
-    </group>
-    <fields>
-      <field>
-        <field_name>VALOR_PARAM</field_name>
-        <key_value>HOSTNAME</key_value>
-        <target_name>HOSTNAME</target_name>
-        <target_type>String</target_type>
-        <target_format/>
-        <target_length>100</target_length>
-        <target_precision>-1</target_precision>
-        <target_decimal_symbol/>
-        <target_grouping_symbol/>
-        <target_currency_symbol/>
-        <target_null_string/>
-        <target_aggregation_type>-</target_aggregation_type>
-      </field>
-      <field>
-        <field_name>VALOR_PARAM</field_name>
-        <key_value>DATEBASENAME</key_value>
-        <target_name>DATEBASENAME</target_name>
-        <target_type>String</target_type>
-        <target_format/>
-        <target_length>100</target_length>
-        <target_precision>-1</target_precision>
-        <target_decimal_symbol/>
-        <target_grouping_symbol/>
-        <target_currency_symbol/>
-        <target_null_string/>
-        <target_aggregation_type>-</target_aggregation_type>
-      </field>
-      <field>
-        <field_name>VALOR_PARAM</field_name>
-        <key_value>PORTNUMBER</key_value>
-        <target_name>PORTNUMBER</target_name>
-        <target_type>String</target_type>
-        <target_format/>
-        <target_length>100</target_length>
-        <target_precision>-1</target_precision>
-        <target_decimal_symbol/>
-        <target_grouping_symbol/>
-        <target_currency_symbol/>
-        <target_null_string/>
-        <target_aggregation_type>-</target_aggregation_type>
-      </field>
-      <field>
-        <field_name>VALOR_PARAM</field_name>
-        <key_value>USERNAME</key_value>
-        <target_name>USERNAME</target_name>
-        <target_type>String</target_type>
-        <target_format/>
-        <target_length>100</target_length>
-        <target_precision>-1</target_precision>
-        <target_decimal_symbol/>
-        <target_grouping_symbol/>
-        <target_currency_symbol/>
-        <target_null_string/>
-        <target_aggregation_type>-</target_aggregation_type>
-      </field>
-      <field>
-        <field_name>VALOR_PARAM</field_name>
-        <key_value>PASSWORD</key_value>
-        <target_name>PASSWORD</target_name>
-        <target_type>String</target_type>
-        <target_format/>
-        <target_length>100</target_length>
-        <target_precision>-1</target_precision>
-        <target_decimal_symbol/>
-        <target_grouping_symbol/>
-        <target_currency_symbol/>
-        <target_null_string/>
-        <target_aggregation_type>-</target_aggregation_type>
-      </field>
-    </fields>
+    <connection>CN_ODS</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>ODS</schema>
+      <table>BUSINESSENTITYADDRESS</table>
+      <key>
+        <name>BusinessEntityID</name>
+        <field>BusinessEntityID</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>AddressID</name>
+        <field>AddressID</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>AddressTypeID</name>
+        <field>AddressTypeID</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>rowguid</name>
+        <field>rowguid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ModifiedDate</name>
+        <field>ModifiedDate</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>BusinessEntityID</name>
+        <rename>BusinessEntityID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>AddressID</name>
+        <rename>AddressID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>AddressTypeID</name>
+        <rename>AddressTypeID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>rowguid</name>
+        <rename>rowguid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ModifiedDate</name>
+        <rename>ModifiedDate</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -610,14 +590,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>288</yloc>
+      <xloc>448</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Microsoft Excel input</name>
+    <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -626,27 +606,121 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <header>Y</header>
+    <noempty>Y</noempty>
+    <stoponempty>N</stoponempty>
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
+    <limit>0</limit>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_!\Source\BusinessEntityAddress.xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
     <fields>
       <field>
-        <name>SISTEMA</name>
+        <name>BusinessEntityID</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
-        <name>HOSTNAME</name>
+        <name>AddressID</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
-        <name>DATEBASENAME</name>
+        <name>AddressTypeID</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
-        <name>PORTNUMBER</name>
+        <name>rowguid</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
-        <name>USERNAME</name>
+        <name>ModifiedDate</name>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
-      <field>
-        <name>PASSWORD</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
     </fields>
+    <sheets>
+      <sheet>
+        <name>Sheet1</name>
+        <startrow>0</startrow>
+        <startcol>0</startcol>
+      </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>N</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -656,72 +730,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Set variables</name>
-    <type>SetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <field_name>SISTEMA</field_name>
-        <variable_name>SISTEMA</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-      <field>
-        <field_name>HOSTNAME</field_name>
-        <variable_name>HOSTNAME</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-      <field>
-        <field_name>DATEBASENAME</field_name>
-        <variable_name>DATEBASENAME</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-      <field>
-        <field_name>PORTNUMBER</field_name>
-        <variable_name>PORTNUMBER</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-      <field>
-        <field_name>USERNAME</field_name>
-        <variable_name>USERNAME</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-      <field>
-        <field_name>PASSWORD</field_name>
-        <variable_name>PASSWORD</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value/>
-      </field>
-    </fields>
-    <use_formatting>Y</use_formatting>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>288</yloc>
+      <xloc>128</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -745,7 +755,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>NOMBRE_PARAM</name>
+        <name>BusinessEntityID</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -762,113 +772,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table input</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>CN_ORACLE</connection>
-    <sql>SELECT SISTEMA, NOMBRE_PARAM, VALOR_PARAM FROM PARAMETROS
-WHERE SISTEMA = 'TAREA_1'</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>SISTEMA</name>
-        <length>100</length>
-        <precision>-1</precision>
-        <origin>Table input</origin>
-        <comments>SISTEMA</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_US</date_format_locale>
-        <date_format_timezone>America/Los_Angeles</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>NOMBRE_PARAM</name>
-        <length>20</length>
-        <precision>-1</precision>
-        <origin>Table input</origin>
-        <comments>NOMBRE_PARAM</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_US</date_format_locale>
-        <date_format_timezone>America/Los_Angeles</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>VALOR_PARAM</name>
-        <length>20</length>
-        <precision>-1</precision>
-        <origin>Table input</origin>
-        <comments>VALOR_PARAM</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_US</date_format_locale>
-        <date_format_timezone>America/Los_Angeles</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>96</xloc>
-      <yloc>288</yloc>
+      <xloc>288</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
