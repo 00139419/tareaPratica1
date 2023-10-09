@@ -315,7 +315,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_Address.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_Address.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -354,7 +354,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntity.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntity.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -393,7 +393,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntity.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntity.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -432,7 +432,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntityAddress.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_BusinessEntityAddress.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -510,7 +510,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_Department.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_Department.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -549,7 +549,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmailAddress.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmailAddress.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -588,7 +588,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_Employee.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_Employee.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -627,7 +627,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmployeeDepartmentHistory.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmployeeDepartmentHistory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -666,7 +666,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmployeePayHistory.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_EmployeePayHistory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -705,7 +705,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_Person.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_Person.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -744,7 +744,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_PersonPhone.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_PersonPhone.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -783,7 +783,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_Product.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_Product.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -822,7 +822,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_ProductCategory.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_ProductCategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -861,7 +861,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_ProductSubcategory.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_ProductSubcategory.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -900,7 +900,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\T_Replica_StateProvince.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\T_Replica_StateProvince.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>

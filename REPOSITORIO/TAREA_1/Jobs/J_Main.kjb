@@ -316,7 +316,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Transformations\Parametros.ktr</filename>
+      <filename>C:\REPOSITORIO\TAREA_1\Transformations\Parametros.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -420,7 +420,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>C:\REPOSITORIO\TAREA_1\JOBS\J_LOAD_CUSTOMERS.kjb</filename>
+      <filename>C:/REPOSITORIO/TAREA_1/Jobs/J_LOAD_CUSTOMERS.kjb</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>
@@ -534,19 +534,6 @@
       <nr>0</nr>
       <xloc>848</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Abort job 2</name>
-      <description/>
-      <type>ABORT</type>
-      <attributes/>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>642</xloc>
-      <yloc>800</yloc>
       <attributes_kjc/>
     </entry>
     <entry>

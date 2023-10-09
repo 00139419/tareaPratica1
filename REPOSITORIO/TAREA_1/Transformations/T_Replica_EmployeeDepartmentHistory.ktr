@@ -638,7 +638,7 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>${DIR_REPO}\TAREA_1\Source\EmployeeDepartmentHistory.xlsx</name>
+      <name>C:\REPOSITORIO\TAREA_1\Source\EmployeeDepartmentHistory.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
