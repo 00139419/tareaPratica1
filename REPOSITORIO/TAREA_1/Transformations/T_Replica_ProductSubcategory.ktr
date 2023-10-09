@@ -627,7 +627,7 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_!\Source\ProductSubcategory.xlsx</name>
+      <name>${DIR_REPO}\TAREA_1\Source\ProductSubcategory.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
