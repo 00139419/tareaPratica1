@@ -305,7 +305,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>112</xloc>
+      <xloc>48</xloc>
       <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
@@ -344,7 +344,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>224</xloc>
+      <xloc>176</xloc>
       <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
@@ -359,8 +359,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>304</xloc>
-      <yloc>368</yloc>
+      <xloc>240</xloc>
+      <yloc>416</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -372,12 +372,12 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>304</xloc>
-      <yloc>480</yloc>
+      <xloc>240</xloc>
+      <yloc>528</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Replica</name>
+      <name>J_Replica</name>
       <description/>
       <type>JOB</type>
       <attributes/>
@@ -409,7 +409,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>384</xloc>
+      <xloc>320</xloc>
       <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
@@ -444,7 +444,7 @@
     </hop>
     <hop>
       <from>T_Variables_De_Entorno</from>
-      <to>Replica</to>
+      <to>J_Replica</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -452,7 +452,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Replica</from>
+      <from>J_Replica</from>
       <to>Error</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

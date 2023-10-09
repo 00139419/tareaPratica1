@@ -500,7 +500,7 @@
     <hop>
       <from>Microsoft Excel input</from>
       <to>Sort rows</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Sort rows</from>
@@ -508,6 +508,71 @@
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>CN_ODS</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>ODS</schema>
+      <table>COUNTRYREGION</table>
+      <key>
+        <name>CountryRegionCode</name>
+        <field>CountryRegionCode</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Name</name>
+        <field>Name</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ModifiedDate</name>
+        <field>ModifiedDate</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>CountryRegionCode</name>
+        <rename>CountryRegionCode</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Name</name>
+        <rename>Name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ModifiedDate</name>
+        <rename>ModifiedDate</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Microsoft Excel input</name>
     <type>ExcelInput</type>
@@ -540,7 +605,7 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_!\Source\CountryRegion.xlsx</name>
+      <name>C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO\TAREA_1\Source\CountryRegion.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -662,71 +727,6 @@
     </remotesteps>
     <GUI>
       <xloc>288</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>CN_ODS</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>ODS</schema>
-      <table>COUNTRYREGION</table>
-      <key>
-        <name>CountryRegionCode</name>
-        <field>CountryRegionCode</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>Name</name>
-        <field>Name</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>ModifiedDate</name>
-        <field>ModifiedDate</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>CountryRegionCode</name>
-        <rename>CountryRegionCode</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>Name</name>
-        <rename>Name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>ModifiedDate</name>
-        <rename>ModifiedDate</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>

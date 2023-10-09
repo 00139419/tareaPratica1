@@ -1,14 +1,14 @@
 --------------------------------------------------------
--- Archivo creado  - domingo-octubre-08-2023   
+-- Archivo creado  - lunes-octubre-09-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table PARAMETROS
 --------------------------------------------------------
 
   CREATE TABLE "ETL_USER"."PARAMETROS" 
-   (	"SISTEMA" VARCHAR2(100 BYTE), 
-	"NOMBRE_PARAM" VARCHAR2(20 BYTE), 
-	"VALOR_PARAM" VARCHAR2(20 BYTE)
+   (	"SISTEMA" VARCHAR2(1000 BYTE), 
+	"NOMBRE_PARAM" VARCHAR2(2000 BYTE), 
+	"VALOR_PARAM" VARCHAR2(2000 BYTE)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
@@ -26,3 +26,4 @@ Insert into ETL_USER.PARAMETROS (SISTEMA,NOMBRE_PARAM,VALOR_PARAM) values ('TARE
 Insert into ETL_USER.PARAMETROS (SISTEMA,NOMBRE_PARAM,VALOR_PARAM) values ('TAREA_1','DIR_FILE','C:\WAITS\TAREA1');
 Insert into ETL_USER.PARAMETROS (SISTEMA,NOMBRE_PARAM,VALOR_PARAM) values ('TAREA_1','PASSWORD','1234');
 Insert into ETL_USER.PARAMETROS (SISTEMA,NOMBRE_PARAM,VALOR_PARAM) values ('TAREA_1','SCHEMA_DW','DATA_WAREHOUSE');
+Insert into ETL_USER.PARAMETROS (SISTEMA,NOMBRE_PARAM,VALOR_PARAM) values ('TAREA_1','DIR_REPO','C:\Users\Daniel\Documents\Git\tareaPratica1\REPOSITORIO');
